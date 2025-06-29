@@ -9,9 +9,10 @@ bot = telebot.TeleBot(TOKEN)
 def start(message):
     markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
     markup.add("🕋 Islomiy kitoblar", "📈 Top 100 kitoblar")
-    bot.send_message(message.chat.id, "Assalomu alaykum!
-Bot ishga tushdi.", reply_markup=markup)
-
+    bot.send_message(message.chat.id,
+    "Assalomu alaykum!\n\n"
+    "Botimizga hush kelibsiz. Men sizga kitoblar haqida yordam bera olaman."
+)
 @bot.message_handler(func=lambda message: message.text == "📈 Top 100 kitoblar")
 def top_books(message):
     bot.send_document(message.chat.id, "BQACAgIAAxkBAAIFPWhhXKsEZgHTew7T8R19Y8aebBt5AAKyfQACVbwRS4y7Bhr1YAgvNgQ")
