@@ -1,2 +1,2 @@
-# telegram-blt
+# telegram-bot
 Telegram bot
